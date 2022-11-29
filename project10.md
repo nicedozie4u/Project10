@@ -7,13 +7,13 @@ This project consists of two parts:
 
 Your target architecture will look like this:
 
-![](./Project10/images/nginx_lb.png)
+![](./images/nginx_lb.png)
 
 You can either uninstall Apache from the existing Load Balancer server, or create a fresh installation of Linux for Nginx.
 
 1. Create an EC2 VM based on Ubuntu Server 20.04 LTS and name it `Nginx LB` (do not forget to open TCP port 80 for HTTP connections, also open TCP port 443 – this port is used for secured HTTPS connections)
 
-![](./Project10/images/nginx%20LB.PNG)
+![](./images/nginx%20LB.PNG)
 
 2. Update `/etc/hosts` file for local DNS with Web Servers’ names (e.g. Web1 and Web2) and their local IP addresses
 
@@ -26,7 +26,7 @@ sudo apt update
 sudo apt install nginx
 ```
 
-![](./Project10/images/update%20%26%26%20install%20Nginx.PNG)
+![](./images/update%20%26%26%20install%20Nginx.PNG)
 
 Configure Nginx LB using Web Servers’ names defined in `/etc/hosts`
 
@@ -54,9 +54,9 @@ server {
 #       include /etc/nginx/sites-enabled/*;
 ```
 
-![](./Project10/images/edit%20nginx%20conf0.PNG)
+![](./images/edit%20nginx%20conf0.PNG)
 
-![](./Project10/images/edit%20nginx%20conf.PNG)
+![](./images/edit%20nginx%20conf.PNG)
 
 Restart Nginx and make sure the service is up and running
 
@@ -65,8 +65,7 @@ sudo systemctl restart nginx
 sudo systemctl status nginx
 ```
 
-![](./Project10/images/enable%20%26%26%20start%20nginx.PNG)
+![](./images/enable%20%26%26%20start%20nginx.PNG)
 
-![](./Project10/images/nginx%20running.PNG)
-
+![](./images/nginx%20running.PNG)
 
