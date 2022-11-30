@@ -165,13 +165,15 @@ To do so, lets edit the `crontab` file with the following command
 
 `crontab -e`
 
-![](./images/cron%20job.PNG)
-
 Add following line:
 
 `* */12 * * *   root /usr/bin/certbot renew > /dev/null 2>&1`
 
 ![](./images/set%20cron%20job.PNG)
+
+![](./images/cron%20job.PNG)
+
+
 
 You can always change the interval of this cronjob if twice a day is too often by adjusting schedule expression.
 
