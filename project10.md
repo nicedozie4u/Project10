@@ -60,6 +60,8 @@ server {
 
 ![](./images/edit%20nginx%20conf.PNG)
 
+![](./images/test%20nginx%20successful.PNG)
+
 Restart Nginx and make sure the service is up and running
 
 ```
