@@ -83,9 +83,9 @@ In order to get a valid SSL certificate – you need to register a new domain na
 
 ![](./images/create%20hosted%20zone2.PNG)
 
-![](./images/manage%20custom%20name%20server.PNG)
-
 ![](./images/connect%20to%20hosting%20site.PNG)
+
+![](./images/manage%20custom%20name%20server.PNG)
 
 ![](./images/change%20successful.PNG)
 
