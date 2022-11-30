@@ -127,9 +127,13 @@ Make sure `snapd` service is active and running
 
 `sudo systemctl status snapd`
 
+![](./images/snapd.PNG)
+
 Install certbot
 
 `sudo snap install --classic certbot`
+
+![](./images/certbot%20installed.PNG)
 
 Request your certificate (just follow the certbot instructions – you will need to choose which domain you want your certificate to be issued for, domain name will be looked up from `nginx.conf` file so make sure you have updated it on step 4).
 
@@ -137,8 +141,11 @@ Request your certificate (just follow the certbot instructions – you will need
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
 sudo certbot --nginx
 ```
+![](./images/get%20certificate.PNG)
 
 Test secured access to your Web Solution by trying to reach `https://<your-domain-name.com>`
+
+![](./images/secure%20site.PNG)
 
 You shall be able to access your website by using HTTPS protocol (that uses TCP port 443) and see a padlock pictogram in your browser’s search string.
 Click on the padlock icon and you can see the details of the certificate issued for your website.
@@ -151,15 +158,21 @@ You can test renewal command in `dry-run` mode
 
 `sudo certbot renew --dry-run`
 
+![](./images/test%20renewal.PNG)
+
 Best pracice is to have a scheduled job that to run renew command periodically. Let us configure a cronjob to run the command twice a day.
 
 To do so, lets edit the `crontab` file with the following command
 
 `crontab -e`
 
+![](./images/cron%20job.PNG)
+
 Add following line:
 
 `* */12 * * *   root /usr/bin/certbot renew > /dev/null 2>&1`
+
+![](./images/set%20cron%20job.PNG)
 
 You can always change the interval of this cronjob if twice a day is too often by adjusting schedule expression.
 
