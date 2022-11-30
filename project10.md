@@ -77,17 +77,45 @@ In order to get a valid SSL certificate – you need to register a new domain na
 
 1. Register a new domain name with any registrar of your choice in any domain zone (e.g. `.com, .net, .org, .edu, .info, .xyz` or any other)
 
+![](./images/free%20domain.PNG)
+
+![](./images/create%20hosted%20zone.PNG)
+
+![](./images/create%20hosted%20zone2.PNG)
+
+![](./images/manage%20custom%20name%20server.PNG)
+
+![](./images/connect%20to%20hosting%20site.PNG)
+
+![](./images/change%20successful.PNG)
+
 2. Assign an Elastic IP to your Nginx LB server and associate your domain name with this Elastic IP
 
 You might have noticed, that every time you restart or stop/start your EC2 instance – you get a new public IP address. When you want to associate your domain name – it is better to have a static IP address that does not change after reboot. Elastic IP is the solution for this problem, learn how to allocate an Elastic IP and associate it with an EC2 server on this page.
 
 3.  A record in your registrar to point to Nginx LB using Elastic IP address
 
+![](./images/create%20record.PNG)
+
+![](./images/www%20record.PNG)
+
+![](./images/summary.PNG)
+
 Check that your Web Servers can be reached from your browser using new domain name using HTTP protocol – `http://<your-domain-name.com>`
+
+![](./images/browse%20my%20domain%20name.PNG)
 
 4. Configure Nginx to recognize your new domain name
 
 Update your `nginx.conf` with `server_name www.<your-domain-name.com>` instead of `server_name www.domain.com`
+
+![](./images/update%20%26%26%20install%20Nginx.PNG)
+
+![](./images/enable%20%26%26%20start%20nginx.PNG)
+
+![](./images/nginx%20running.PNG)
+
+![](./images/test%20nginx%20successful.PNG)
 
 5. Install `certbot` and request for an SSL/TLS certificate
 
