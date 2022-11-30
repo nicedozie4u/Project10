@@ -119,7 +119,6 @@ Update your `nginx.conf` with `server_name www.<your-domain-name.com>` instead o
 
 ![](./images/nginx%20running.PNG)
 
-![](./images/test%20nginx%20successful.PNG)
 
 5. Install `certbot` and request for an SSL/TLS certificate
 
