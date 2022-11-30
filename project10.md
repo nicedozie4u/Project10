@@ -34,6 +34,8 @@ Open the default nginx configuration file.
 
 `sudo vi /etc/nginx/nginx.conf`
 
+![](./images/edit%20nginx%20conf0.PNG)
+
 ```
 #insert following configuration into http section
 
@@ -53,8 +55,6 @@ server {
 #comment out this line
 #       include /etc/nginx/sites-enabled/*;
 ```
-
-![](./images/edit%20nginx%20conf0.PNG)
 
 ![](./images/edit%20nginx%20conf.PNG)
 
