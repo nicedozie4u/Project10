@@ -28,6 +28,8 @@ sudo apt install nginx
 
 ![](./images/update%20%26%26%20install%20Nginx.PNG)
 
+![](./images/enable%20%26%26%20start%20nginx.PNG)
+
 Configure Nginx LB using Web Servers’ names defined in `/etc/hosts`
 
 Open the default nginx configuration file.
